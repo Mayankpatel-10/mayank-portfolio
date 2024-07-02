@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -14,6 +16,7 @@ body {
     width: 100%;
     height: 100vh;
     background: wheat;
+    overflow: hidden;
 }
 
 nav {
@@ -25,16 +28,20 @@ nav {
     justify-content: space-between;
 }
 
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
 nav ul li {
-    display: inline-block;
     list-style: none;
-    margin: 10px 20px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: rgb(10, 10, 10);
     font-weight: bold;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
@@ -44,12 +51,14 @@ nav ul li a:hover {
 .detail {
     margin-left: 8%;
     margin-top: 13%;
+    animation: fadeIn 2s ease-out;
 }
 
 .detail h1 {
     font-size: 50px;
     color: black;
     margin-bottom: 20px;
+    animation: slideInFromLeft 1s ease-out;
 }
 
 span {
@@ -59,6 +68,7 @@ span {
 .detail p {
     color: rgb(115, 60, 0);
     line-height: 22px;
+    animation: slideInFromRight 1s ease-out;
 }
 
 .detail a {
@@ -70,6 +80,15 @@ span {
     display: inline-block;
     margin: 30px 0;
     border-radius: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+    animation: fadeIn 2s ease-out 0.5s;
+    animation-fill-mode: both;
+}
+
+.detail a:hover {
+    background-color: orange;
+    color: #000;
+    transform: scale(1.1);
 }
 
 .images {
@@ -112,12 +131,14 @@ section.visible {
 .content {
     width: 80%;
     margin: auto;
+    animation: fadeIn 2s ease-out;
 }
 
 h2 {
     font-size: 36px;
     text-align: center;
     margin-bottom: 20px;
+    animation: slideInFromBottom 1s ease-out;
 }
 
 #about p, #contact p {
@@ -166,6 +187,7 @@ h2 {
 #contact a {
     color: #212121;
     text-decoration: none;
+    transition: color 0.3s;
 }
 
 #contact a:hover {
@@ -205,10 +227,48 @@ h2 {
     display: inline-block;
     margin-top: 10px;
     border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
 }
 
 .btn:hover {
     background-color: orange;
     color: #000;
-    transition: background-color 0.3s, color 0.3s;
+    transform: scale(1.1);
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromBottom {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
 }
