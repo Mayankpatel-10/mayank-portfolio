@@ -41,12 +41,12 @@ nav ul li a:hover {
     color: rgb(161, 0, 0);
 }
 
-.detel {
+.detail {
     margin-left: 8%;
     margin-top: 13%;
 }
 
-.detel h1 {
+.detail h1 {
     font-size: 50px;
     color: black;
     margin-bottom: 20px;
@@ -56,12 +56,12 @@ span {
     color: orange;
 }
 
-.detel p {
+.detail p {
     color: rgb(115, 60, 0);
     line-height: 22px;
 }
 
-.detel a {
+.detail a {
     background-color: #212121;
     padding: 10px 18px;
     text-decoration: none;
@@ -74,9 +74,9 @@ span {
 
 .images {
     width: 40%;
-    height: 80%;
+    height: 75%;
     position: absolute;
-    bottom: 0;
+    bottom: 20px;
     right: 100px;
 }
 
