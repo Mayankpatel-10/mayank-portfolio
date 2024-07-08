@@ -26,7 +26,7 @@ header {
     background: #fff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    padding: 10px 0;
+    padding: 5px 0;
 }
 
 nav {
@@ -38,6 +38,28 @@ nav {
 .logo {
     font-size: 18px;
     font-weight: 600;
+    margin-right: 20px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #007bff;
 }
 
 nav ul {
@@ -255,60 +277,24 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    header {
-        padding: 5px 0; /* even slimmer top bar for mobile screens */
-    }
-
-    nav ul {
+   .nav-links {
         flex-direction: column;
         align-items: center;
     }
 
-    nav ul li {
-        margin: 5px 0; /* reduced margin for mobile screens */
-    }
-
-     .container {
-        width: 90%;
-    }
-
-    h2 {
-        font-size: 24px;
-    }
-
-   .hero h1 {
-        font-size: 24px;
-    }
-
-   .hero p {
-        font-size: 14px;
+   .nav-links li {
+        margin: 10px 0;
     }
 }
 
 @media (max-width: 600px) {
-    nav ul {
+   .nav-links {
         flex-direction: column;
         align-items: center;
     }
 
-    nav ul li {
-        margin: 5px 0;
-    }
-
-    .container {
-        width: 95%;
-    }
-
-    h2 {
-        font-size: 20px;
-    }
-
-    .hero h1 {
-        font-size: 20px;
-    }
-
-    .hero p {
-        font-size: 12px;
+   .nav-links li {
+        margin: 10px 0;
     }
 }
 
