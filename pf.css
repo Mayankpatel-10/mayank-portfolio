@@ -21,16 +21,18 @@ body {
 
 nav {
     display: flex;
-    width: 80%;
+    width: 90%;
     margin: auto;
     padding: 10px;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 nav ul {
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 nav ul li {
@@ -362,4 +364,10 @@ h2 {
     .project-item h3 {
         font-size: 20px;
     }
+}
+
+/* Ensure images and videos fit within their containers */
+img, video {
+    max-width: 100%;
+    height: auto;
 }
