@@ -342,7 +342,8 @@ h2 {
     }
 
     .detail p {
-        font-size: 16px;
+        font-size: 36px;
+        line-height: 50px;
     }
 
     .detail a {
@@ -351,7 +352,8 @@ h2 {
     }
 
     h2 {
-        font-size: 28px;
+        font-size: 36px;
+        line-height: 50px;
     }
 
     #skills li {
@@ -363,6 +365,7 @@ h2 {
     }
 
     .project-item h3 {
-        font-size: 20px;
+        font-size: 36px;
+        line-height: 50px;
     }
 }
