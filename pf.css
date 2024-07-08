@@ -36,7 +36,7 @@ nav {
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 600;
 }
 
@@ -46,7 +46,7 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 20px;
+    margin-left: 15px;
 }
 
 nav ul li a {
@@ -256,19 +256,32 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
     header {
-        padding: 5px 0;
+        padding: 5px 0; /* even slimmer top bar for mobile screens */
     }
 
-    .hero h1 {
-        font-size: 36px;
-    }
-
-    .projects-grid {
+    nav ul {
         flex-direction: column;
+        align-items: center;
     }
 
-    .project-card {
-        flex: 1 1 100%;
+    nav ul li {
+        margin: 5px 0; /* reduced margin for mobile screens */
+    }
+
+     .container {
+        width: 90%;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+   .hero h1 {
+        font-size: 24px;
+    }
+
+   .hero p {
+        font-size: 14px;
     }
 }
 
@@ -279,23 +292,23 @@ footer {
     }
 
     nav ul li {
-        margin: 10px 0;
+        margin: 5px 0;
     }
 
     .container {
-        width: 90%;
+        width: 95%;
     }
 
     h2 {
-        font-size: 28px;
+        font-size: 20px;
     }
 
     .hero h1 {
-        font-size: 30px;
+        font-size: 20px;
     }
 
     .hero p {
-        font-size: 16px;
+        font-size: 12px;
     }
 }
 
