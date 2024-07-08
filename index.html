@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio</title>
     <link rel="stylesheet" href="pf.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="hero">
+    <!-- Header -->
+    <header>
         <nav>
-            <img src="mpa.png" class="logo" alt="Logo">
+            <div class="logo">MP</div>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -18,68 +20,76 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <div class="detail">
-            <h1>I am Mayank <span>Patel</span></h1>
-            <p>This is my official Portfolio website to showcase all
-                <br>Details and work experience in Web Development 
-            </p>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Hello, I'm <span>Mayank Patel</span></h1>
+            <p>Web Developer | Designer | Programmer</p>
             <a href="path/to/your-cv.pdf" class="btn" download>Download CV</a>
         </div>
-        <div class="images">
-            <img src="bg.png" class="shape" alt="Background Shape">
-            <img src="my.png" class="mayank" alt="Mayank Patel">
-        </div>
-    </div>
+    </section>
 
     <!-- About Section -->
-    <section id="about" class="animated-section">
-        <div class="content">
+    <section id="about">
+        <div class="container">
             <h2>About Me</h2>
-            <p>Hello! I am Mayank Patel, a passionate and dedicated web developer with a knack for creating dynamic and responsive websites. With a strong background in programming and design, I aim to build websites that not only look great but also provide a seamless user experience.</p>
+            <div class="about-content">
+                <p>Hello! I am Mayank Patel, a passionate and dedicated web developer with a knack for creating dynamic and responsive websites. With a strong background in programming and design, I aim to build websites that not only look great but also provide a seamless user experience.</p>
+            </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="animated-section">
-        <div class="content">
+    <section id="skills">
+        <div class="container">
             <h2>Skills</h2>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>C</li>
-                <li>C++</li>
-                <li>Python</li>
-            </ul>
+            <div class="skills-grid">
+                <div class="skill">HTML</div>
+                <div class="skill">CSS</div>
+                <div class="skill">JavaScript</div>
+                <div class="skill">C</div>
+                <div class="skill">C++</div>
+                <div class="skill">Python</div>
+            </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="animated-section">
-        <div class="content">
+    <section id="projects">
+        <div class="container">
             <h2>Projects</h2>
-            <div class="project-item">
-                <h3>Desktop App Notifier</h3>
-                <p>A Desktop Notifier is a straightforward application that generates a notification message in the form of a pop-up message on the desktop.</p>
-            </div>
-            <div class="project-item">
-                <h3>QR Code Generator</h3>
-                <p>A QR code generator is a tool or software that creates Quick Response codes. These codes can be scanned using a QR code reader, typically available on smartphones, to quickly access the encoded information.</p>
-                <img src="ss.png" alt="QR Code" width="30%" height="30%">
-            </div>
-            <div class="project-item">
-                <h3>Flappy Birdie</h3>
-                <p>Flappy Bird is a simple and addictive arcade-style game where the player controls a bird that moves to the right and has to avoid hitting pipes.</p>
-                <p><a href="https://flappy-birdie-two.vercel.app/" class="btn" target="_blank">Play Flappy Bird</a></p>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Desktop App Notifier</h3>
+                    <p>A Desktop Notifier is a straightforward application that generates a notification message in the form of a pop-up message on the desktop.</p>
+                </div>
+                <div class="project-card">
+                    <h3>QR Code Generator</h3>
+                    <p>A QR code generator is a tool or software that creates Quick Response codes. These codes can be scanned using a QR code reader, typically available on smartphones, to quickly access the encoded information.</p>
+                    <img src="ss.png" alt="QR Code" class="project-image">
+                </div>
+                <div class="project-card">
+                    <h3>Flappy Birdie</h3>
+                    <p>Flappy Bird is a simple and addictive arcade-style game where the player controls a bird that moves to the right and has to avoid hitting pipes.</p>
+                    <a href="https://flappy-birdie-two.vercel.app/" class="btn" target="_blank">Play Flappy Bird</a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="animated-section">
-        <div class="content">
+    <section id="contact">
+        <div class="container">
             <h2>Contact Me</h2>
             <p>If you have any questions or want to get in touch, feel free to contact me through the following:</p>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
             <ul>
                 <li>Email: <a href="mailto:mayankpatelmehta@gmail.com">mayankpatelmehta@gmail.com</a></li>
                 <li>LinkedIn: <a href="https://www.linkedin.com/in/mayank-patel-a1b3441b3" target="_blank">www.linkedin.com/in/mayank-patel-a1b3441b3</a></li>
@@ -87,36 +97,11 @@
         </div>
     </section>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const sections = document.querySelectorAll('.animated-section');
-
-            const options = {
-                threshold: 0.1
-            };
-
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, options);
-
-            sections.forEach(section => {
-                observer.observe(section);
-            });
-        });
-
-        document.querySelectorAll('.animated-section').forEach(section => {
-            section.addEventListener('mouseenter', () => {
-                section.classList.add('highlight');
-            });
-            section.addEventListener('mouseleave', () => {
-                section.classList.remove('highlight');
-            });
-        });
-    </script>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Mayank Patel. All Rights Reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
