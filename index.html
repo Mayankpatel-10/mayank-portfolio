@@ -125,4 +125,14 @@
         });
     </script>
 </body>
+    // Add event listeners to each section
+document.addEventListener("DOMContentLoaded", function() {
+  const sections = document.querySelectorAll("section");
+  sections.forEach((section) => {
+    section.addEventListener("scrollIntoView", function() {
+      // Add the 'show' class to the section content
+      section.querySelector(".about-content, .skills-grid, .projects-grid, .contact-form").classList.add("show");
+    });
+  });
+});
 </html>
