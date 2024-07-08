@@ -32,7 +32,7 @@
     </section>
 
     <!-- About Section -->
-    <section id="about">
+    <section id="about" class="animate">
         <div class="container">
             <h2>About Me</h2>
             <div class="about-content">
@@ -42,7 +42,7 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills">
+    <section id="skills" class="animate">
         <div class="container">
             <h2>Skills</h2>
             <div class="skills-grid">
@@ -57,7 +57,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects">
+    <section id="projects" class="animate">
         <div class="container">
             <h2>Projects</h2>
             <div class="projects-grid">
@@ -80,7 +80,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
+    <section id="contact" class="animate">
         <div class="container">
             <h2>Contact Me</h2>
             <p>If you have any questions or want to get in touch, feel free to contact me through the following:</p>
@@ -103,5 +103,26 @@
             <p>&copy; 2024 Mayank Patel. All Rights Reserved.</p>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.animate');
+            const options = {
+                threshold: 0.1
+            };
+            const observer = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, options);
+
+            elements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
 </body>
 </html>
