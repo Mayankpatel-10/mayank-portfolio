@@ -13,9 +13,8 @@ body {
     scroll-behavior: smooth;
 }
 
-/* Container Styles */
 .container {
-    width: 80%;
+    width: 90%;
     max-width: 1200px;
     margin: auto;
     padding: 20px 0;
@@ -25,7 +24,7 @@ body {
 header {
     position: sticky;
     top: 0;
-    background-color: #444444;
+    background-color: #06011a;
     box-shadow: 0 4px 6px #ff6f61;
     z-index: 1000;
     padding: 10px 0;
@@ -47,6 +46,8 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    list-style-type: none;
+    padding: 0;
 }
 
 .nav-links li {
@@ -64,6 +65,33 @@ nav {
     color: #ff6f61;
 }
 
+/* Media Queries for Header */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #06011a;
+        padding: 20px 0;
+    }
+
+    .nav-links li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .nav-links li a {
+        font-size: 18px;
+    }
+}
+
 /* Hero Section */
 .hero {
     height: 100vh;
@@ -77,20 +105,22 @@ nav {
 
 .hero-content {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     max-width: 1200px;
     width: 100%;
 }
 
 .hero-text {
-    max-width: 600px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .hero h1 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     margin-bottom: 20px;
-    animation: float 3s ease-in-out infinite; /* Add floating animation */
+    animation: float 3s ease-in-out infinite;
 }
 
 .hero h1 span {
@@ -98,9 +128,9 @@ nav {
 }
 
 .hero p {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     margin-bottom: 20px;
-    animation: float 3s ease-in-out infinite; /* Add floating animation */
+    animation: float 3s ease-in-out infinite;
 }
 
 .hero a.btn {
@@ -112,7 +142,7 @@ nav {
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
-    animation: float 3s ease-in-out infinite; /* Add floating animation */
+    animation: float 3s ease-in-out infinite;
 }
 
 .hero a.btn:hover {
@@ -123,11 +153,13 @@ nav {
 
 .hero-image {
     flex-shrink: 0;
+    margin-top: 20px;
 }
 
 .hero img {
-    width: 450px;
-    height: 700px;
+    width: 80%;
+    max-width: 450px;
+    height: auto;
     border-radius: 50%;
     transition: transform 0.75s;
 }
@@ -135,7 +167,6 @@ nav {
 .hero img:hover {
     transform: scale(1.1);
 }
-
 
 /* About Section */
 #about {
@@ -147,7 +178,7 @@ nav {
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 40px;
-    color: #8ca415;
+    color: #ff6f61;
 }
 
 .about-content {
@@ -157,7 +188,46 @@ nav {
     color: #ffffff;
 }
 
-/* Skills Section Styles */
+/* Education Section */
+#education {
+    background-color: #1b1b3a;
+    padding: 60px 20px;
+}
+
+#education h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #8ca415;
+}
+
+.education-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.education-item {
+    background-color: #080524;
+    color: #ffffff;
+    padding: 24px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.education-item h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #ff6f61;
+}
+
+.education-item p {
+    font-size: 1.125rem;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Skills Section */
 #skills {
     padding: 50px 0;
     text-align: center;
@@ -228,7 +298,6 @@ nav {
     left: -10px;
 }
 
-
 /* Projects Section */
 #projects {
     background-color: #131531;
@@ -281,8 +350,9 @@ nav {
 }
 
 .project-card img {
-    width: 200px;
-    height: 200px;
+    width: 80%;
+    max-width: 200px;
+    height: auto;
     margin-top: 10px;
     transition: transform 0.3s;
 }
@@ -319,139 +389,96 @@ nav {
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 40px;
-    color: #ff6f61;
+    color: #8ca415;
 }
 
-#contact .container {
-    text-align: center;
-}
-
-#contact p {
-    font-size: 1.25rem;
-    margin-bottom: 20px;
-    color: #ffffff;
-}
-
-#contact form {
+.contact-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
+    text-align: center;
+    color: #ffffff;
 }
 
-#contact form input,
-#contact form textarea {
+.contact-content p {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 500px;
+}
+
+.contact-form input,
+.contact-form textarea {
     width: 100%;
     padding: 12px;
-    margin: 8px 0;
-    border: 1px solid #8ca415;
-    border-radius: 4px;
-    box-sizing: border-box;
-    background-color: #0b0c21;
-    color: #c8ff00;
-}
-
-#contact form input[type="checkbox"] {
-    display: none;
-}
-
-#contact form button {
-    background-color: #ff6f61;
-    color: #ffffff;
-    padding: 12px 24px;
+    margin-bottom: 20px;
     border: none;
     border-radius: 5px;
-    font-weight: 600;
+    font-size: 1rem;
+}
+
+.contact-form input[type="submit"] {
+    background-color: #ff6f61;
+    color: #ffffff;
+    border: none;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
 }
 
-#contact form button:hover {
+.contact-form input[type="submit"]:hover {
     background-color: #ffffff;
     color: #ff6f61;
     transform: scale(1.05);
 }
 
-#contact ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: center;
-    margin-top: 20px;
+/* Media Queries */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero img {
+        width: 60%;
+        max-width: 300px;
+    }
+
+    .projects-grid {
+        flex-direction: column;
+    }
+
+    .education-content {
+        flex-direction: column;
+    }
 }
 
-#contact ul li {
-    margin-bottom: 10px;
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 0.875rem;
+    }
+
+    .hero img {
+        width: 50%;
+        max-width: 200px;
+    }
 }
 
-#contact ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-#contact ul li a:hover {
-    color: #ff6f61;
-}
-
-
-/* Footer */
-footer {
-    background-color: #444444;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
-    color: #ffffff;
-}
-
-footer p {
-    font-size: 1rem;
-}
-
-/* Animation Classes */
-.animate {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.fade-in {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Keyframes for floating effect */
+/* Animations */
 @keyframes float {
-    0% {
+    0%, 100% {
         transform: translateY(0);
     }
     50% {
         transform: translateY(-10px);
     }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-/* Apply floating effect to hero section text and button */
-.hero-text h1,
-.hero-text p,
-.hero-text .btn {
-    animation: float 3s ease-in-out infinite;
-}
-
-/* Adjust position of Play Flappy Bird button */
-.project-card .btn {
-    margin-top: 20px; /* Adjust the value as needed */
-}
-
-/* Animation for Contact Section */
-#contact.animate {
-    opacity: 0;
-    transform: translateY(20px);
-}
-
-#contact.animate.fade-in {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
