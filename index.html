@@ -9,7 +9,7 @@
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script type="text/javascript">
         (function() {
-            emailjs.init('service_mkh9at5'); // Replace 'YOUR_USER_ID' with your EmailJS user ID
+            emailjs.init('642187dc-4e33-449a-8f57-670c845a6b9b'); 
         })();
     </script>
 </head>
@@ -125,16 +125,42 @@
 </section>
 
 
-    <!-- Contact Section -->
-    <section id="contact" class="animate">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <p>If you have any questions or want to get in touch, feel free to contact me through the following:</p>
-            <form class="contact-form" id="contact-form">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit" class="btn">Send Message</button>
+   <!-- Contact Section -->
+<section id="contact" class="animate">
+    <div class="container">
+        <h2>Contact Me</h2>
+        <p>If you have any questions or want to get in touch, feel free to contact me through the following:</p>
+        <form action="https://api.web3forms.com/submit" method="POST">
+
+            <!-- Replace with your Access Key -->
+            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+
+            <!-- Form Inputs with Labels -->
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <!-- Honeypot Spam Protection -->
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+            <!-- Custom Confirmation / Success Page -->
+            <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+
+            <button type="submit">Submit Form</button>
+
+        </form>
+        <ul>
+            <li>Email: <a href="mailto:mayankpatelmehta@gmail.com">mayankpatelmehta@gmail.com</a></li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/mayank-patel-a1b3441b3" target="_blank">www.linkedin.com/in/mayank-patel-a1b3441b3</a></li>
+        </ul>
+    </div>
+</section>
+
             </form>
             <ul>
                 <li>Email: <a href="mailto:mayankpatelmehta@gmail.com">mayankpatelmehta@gmail.com</a></li>
