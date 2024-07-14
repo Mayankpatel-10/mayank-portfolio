@@ -65,14 +65,23 @@ nav {
     color: #ff6f61;
 }
 
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 5px;
+}
+
 /* Media Queries for Header */
 @media (max-width: 768px) {
     .nav-links {
         display: none;
-    }
-
-    .nav-links.active {
-        display: flex;
         flex-direction: column;
         position: absolute;
         top: 60px;
@@ -82,13 +91,16 @@ nav {
         padding: 20px 0;
     }
 
-    .nav-links li {
-        margin-right: 0;
-        margin-bottom: 10px;
+    .nav-links.active {
+        display: flex;
     }
 
-    .nav-links li a {
-        font-size: 18px;
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .hamburger {
+        display: block;
     }
 }
 
@@ -101,6 +113,7 @@ nav {
     justify-content: center;
     color: #8ca415;
     padding: 0 20px;
+    text-align: center;
 }
 
 .hero-content {
@@ -370,7 +383,6 @@ nav {
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
-    text-decoration: none;
 }
 
 .project-card a.btn:hover {
@@ -381,7 +393,7 @@ nav {
 
 /* Contact Section */
 #contact {
-    background-color: #1b1b3a;
+    background-color: #0e0a25;
     padding: 60px 20px;
 }
 
@@ -445,7 +457,7 @@ nav {
     }
 
     .hero img {
-        width: 60%;
+        width: 70%;
         max-width: 300px;
     }
 
