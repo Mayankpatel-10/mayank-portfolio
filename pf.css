@@ -13,8 +13,9 @@ body {
     scroll-behavior: smooth;
 }
 
+/* Container Styles */
 .container {
-    width: 90%;
+    width: 80%;
     max-width: 1200px;
     margin: auto;
     padding: 20px 0;
@@ -46,8 +47,8 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    list-style-type: none;
-    padding: 0;
+    list-style-type: none; /* Remove default list styles */
+    padding: 0; /* Remove default padding */
 }
 
 .nav-links li {
@@ -65,45 +66,6 @@ nav {
     color: #ff6f61;
 }
 
-/* Hamburger Menu */
-.hamburger {
-    display: none;
-    cursor: pointer;
-}
-
-.hamburger div {
-    width: 25px;
-    height: 3px;
-    background-color: #ffffff;
-    margin: 5px;
-}
-
-/* Media Queries for Header */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: #06011a;
-        padding: 20px 0;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links li {
-        margin: 10px 0;
-    }
-
-    .hamburger {
-        display: block;
-    }
-}
-
 /* Hero Section */
 .hero {
     height: 100vh;
@@ -113,27 +75,24 @@ nav {
     justify-content: center;
     color: #8ca415;
     padding: 0 20px;
-    text-align: center;
 }
 
 .hero-content {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     max-width: 1200px;
     width: 100%;
 }
 
 .hero-text {
-    text-align: center;
-    margin-bottom: 20px;
+    max-width: 600px;
 }
 
 .hero h1 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     margin-bottom: 20px;
-    animation: float 3s ease-in-out infinite;
+    animation: float 3s ease-in-out infinite; /* Add floating animation */
 }
 
 .hero h1 span {
@@ -141,9 +100,9 @@ nav {
 }
 
 .hero p {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     margin-bottom: 20px;
-    animation: float 3s ease-in-out infinite;
+    animation: float 3s ease-in-out infinite; /* Add floating animation */
 }
 
 .hero a.btn {
@@ -155,7 +114,7 @@ nav {
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
-    animation: float 3s ease-in-out infinite;
+    animation: float 3s ease-in-out infinite; /* Add floating animation */
 }
 
 .hero a.btn:hover {
@@ -166,13 +125,11 @@ nav {
 
 .hero-image {
     flex-shrink: 0;
-    margin-top: 20px;
 }
 
 .hero img {
-    width: 80%;
-    max-width: 450px;
-    height: auto;
+    width: 450px;
+    height: 700px;
     border-radius: 50%;
     transition: transform 0.75s;
 }
@@ -180,6 +137,7 @@ nav {
 .hero img:hover {
     transform: scale(1.1);
 }
+
 
 /* About Section */
 #about {
@@ -201,7 +159,7 @@ nav {
     color: #ffffff;
 }
 
-/* Education Section */
+/* Education Section Styles */
 #education {
     background-color: #1b1b3a;
     padding: 60px 20px;
@@ -240,7 +198,9 @@ nav {
     line-height: 1.6;
 }
 
-/* Skills Section */
+
+
+/* Skills Section Styles */
 #skills {
     padding: 50px 0;
     text-align: center;
@@ -311,6 +271,7 @@ nav {
     left: -10px;
 }
 
+
 /* Projects Section */
 #projects {
     background-color: #131531;
@@ -363,9 +324,8 @@ nav {
 }
 
 .project-card img {
-    width: 80%;
-    max-width: 200px;
-    height: auto;
+    width: 200px;
+    height: 200px;
     margin-top: 10px;
     transition: transform 0.3s;
 }
@@ -383,6 +343,7 @@ nav {
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
+    text-decoration: none;
 }
 
 .project-card a.btn:hover {
@@ -393,7 +354,7 @@ nav {
 
 /* Contact Section */
 #contact {
-    background-color: #0e0a25;
+    background-color: #1b1b3a;
     padding: 60px 20px;
 }
 
@@ -401,96 +362,139 @@ nav {
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 40px;
-    color: #8ca415;
+    color: #ff6f61;
 }
 
-.contact-content {
+#contact .container {
+    text-align: center;
+}
+
+#contact p {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+#contact form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    color: #ffffff;
+    margin-top: 20px;
 }
 
-.contact-content p {
-    font-size: 1.25rem;
-    margin-bottom: 20px;
-}
-
-.contact-form {
-    width: 100%;
-    max-width: 500px;
-}
-
-.contact-form input,
-.contact-form textarea {
+#contact form input,
+#contact form textarea {
     width: 100%;
     padding: 12px;
-    margin-bottom: 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
+    margin: 8px 0;
+    border: 1px solid #8ca415;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #0b0c21;
+    color: #c8ff00;
 }
 
-.contact-form input[type="submit"] {
+#contact form input[type="checkbox"] {
+    display: none;
+}
+
+#contact form button {
     background-color: #ff6f61;
     color: #ffffff;
+    padding: 12px 24px;
     border: none;
+    border-radius: 5px;
+    font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
 }
 
-.contact-form input[type="submit"]:hover {
+#contact form button:hover {
     background-color: #ffffff;
     color: #ff6f61;
     transform: scale(1.05);
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    .hero img {
-        width: 70%;
-        max-width: 300px;
-    }
-
-    .projects-grid {
-        flex-direction: column;
-    }
-
-    .education-content {
-        flex-direction: column;
-    }
+#contact ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    margin-top: 20px;
 }
 
-@media (max-width: 480px) {
-    .hero h1 {
-        font-size: 1.5rem;
-    }
-
-    .hero p {
-        font-size: 0.875rem;
-    }
-
-    .hero img {
-        width: 50%;
-        max-width: 200px;
-    }
+#contact ul li {
+    margin-bottom: 10px;
 }
 
-/* Animations */
+#contact ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+#contact ul li a:hover {
+    color: #ff6f61;
+}
+
+
+/* Footer */
+footer {
+    background-color: #444444;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    color: #ffffff;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Animation Classes */
+.animate {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Keyframes for floating effect */
 @keyframes float {
-    0%, 100% {
+    0% {
         transform: translateY(0);
     }
     50% {
         transform: translateY(-10px);
     }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Apply floating effect to hero section text and button */
+.hero-text h1,
+.hero-text p,
+.hero-text .btn {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Adjust position of Play Flappy Bird button */
+.project-card .btn {
+    margin-top: 20px; /* Adjust the value as needed */
+}
+
+/* Animation for Contact Section */
+#contact.animate {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+#contact.animate.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
