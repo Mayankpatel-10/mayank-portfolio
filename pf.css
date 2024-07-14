@@ -309,12 +309,10 @@ nav {
     transform: scale(1.05);
 }
 
-
 /* Contact Section */
 #contact {
-    background-color: #0d1530;
+    background-color: #1b1b3a;
     padding: 60px 20px;
-    text-align: center; /* Add this line to center-align text within the contact section */
 }
 
 #contact h2 {
@@ -324,32 +322,43 @@ nav {
     color: #ff6f61;
 }
 
-#contact p {
-    text-align: center; /* Add this line to center-align the paragraph text */
-    margin-bottom: 20px;
+#contact .container {
+    text-align: center;
 }
 
-.contact-form {
+#contact p {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+#contact form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    max-width: 600px;
-    margin: 0 auto;
+    align-items: center;
+    margin-top: 20px;
 }
 
-.contact-form input,
-.contact-form textarea {
+#contact form input,
+#contact form textarea {
+    width: 100%;
     padding: 12px;
-    background-color: #2a2b31;
-    color: #ffffff;
-    border: 1px solid #777777;
-    border-radius: 5px;
+    margin: 8px 0;
+    border: 1px solid #8ca415;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #0b0c21;
+    color: #c8ff00;
 }
 
-.contact-form button {
+#contact form input[type="checkbox"] {
+    display: none;
+}
+
+#contact form button {
     background-color: #ff6f61;
     color: #ffffff;
-    padding: 12px;
+    padding: 12px 24px;
     border: none;
     border-radius: 5px;
     font-weight: 600;
@@ -357,23 +366,17 @@ nav {
     transition: background-color 0.3s, transform 0.3s;
 }
 
-.contact-form button:hover {
+#contact form button:hover {
     background-color: #ffffff;
     color: #ff6f61;
     transform: scale(1.05);
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
-    outline: none;
-    border: 1px solid #ff6f61;
-}
-
 #contact ul {
-    list-style: none;
-    text-align: center;
+    list-style-type: none;
     padding: 0;
-    color: #ffffff;
+    text-align: center;
+    margin-top: 20px;
 }
 
 #contact ul li {
@@ -381,14 +384,13 @@ nav {
 }
 
 #contact ul li a {
+    color: #ffffff;
     text-decoration: none;
-    color: #ff6f61;
-    font-weight: 500;
     transition: color 0.3s;
 }
 
 #contact ul li a:hover {
-    color: #ffffff;
+    color: #ff6f61;
 }
 
 
@@ -440,4 +442,16 @@ footer p {
 /* Adjust position of Play Flappy Bird button */
 .project-card .btn {
     margin-top: 20px; /* Adjust the value as needed */
+}
+
+/* Animation for Contact Section */
+#contact.animate {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+#contact.animate.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
