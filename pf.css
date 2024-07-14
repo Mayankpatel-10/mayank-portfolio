@@ -70,6 +70,7 @@ nav {
 .hero {
     height: 100vh;
     background-color: #120a18b1;
+    box-shadow: 0 4px 6px #ff6f61;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -142,6 +143,7 @@ nav {
 /* About Section */
 #about {
     background-color: #0e0a25;
+    box-shadow: 0 4px 6px #ff6f61;
     padding: 60px 20px;
 }
 
@@ -157,11 +159,13 @@ nav {
     font-size: 1.25rem;
     line-height: 1.6;
     color: #ffffff;
+    box-shadow: 0 4px 6px #ff6f61;
 }
 
 /* Education Section Styles */
 #education {
     background-color: #1b1b3a;
+    box-shadow: 0 4px 6px #ff6f61;
     padding: 60px 20px;
 }
 
@@ -180,10 +184,11 @@ nav {
 
 .education-item {
     background-color: #080524;
+    box-shadow: 0 4px 6px #ff6f61;
     color: #ffffff;
     padding: 24px;
     border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
 }
 
 .education-item h3 {
@@ -235,9 +240,15 @@ nav {
     max-width: 600px;
     padding: 20px;
     background-color: #080524;
+    box-shadow: 0 4px 6px #ff6f61;
     margin-bottom: 20px;
     position: relative;
     border-radius: 5px;
+}
+
+.roadmap-item {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px #ff6f61;
 }
 
 .roadmap-item:nth-child(odd) {
@@ -275,6 +286,7 @@ nav {
 /* Projects Section */
 #projects {
     background-color: #131531;
+    box-shadow: 0 4px 6px #ff6f61;
     padding: 60px 20px;
 }
 
@@ -309,7 +321,7 @@ nav {
 
 .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 6px #ff6f61;
 }
 
 .project-card h3 {
@@ -355,6 +367,7 @@ nav {
 /* Contact Section */
 #contact {
     background-color: #1b1b3a;
+    box-shadow: 0 4px 6px #ff6f61;
     padding: 60px 20px;
 }
 
@@ -387,11 +400,10 @@ nav {
     width: 100%;
     padding: 12px;
     margin: 8px 0;
-    border: 1px solid #8ca415;
     border-radius: 4px;
     box-sizing: border-box;
     background-color: #0b0c21;
-    color: #c8ff00;
+    box-shadow: 0 4px 6px #ff6f61;
 }
 
 #contact form input[type="checkbox"] {
