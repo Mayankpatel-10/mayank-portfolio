@@ -6,27 +6,39 @@
     <title>Personal Portfolio</title>
     <link rel="stylesheet" href="pf.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init('YOUR_USER_ID'); // Replace 'YOUR_USER_ID' with your EmailJS user ID
+        })();
+    </script>
 </head>
 <body>
     <!-- Header -->
-<header>
-    <nav>
-        <div class="logo">MP</div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+    <header>
+        <nav>
+            <div class="logo">MP</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Hello, I'm <span>Mayank Patel</span></h1>
-            <p>Web Developer | Designer | Programmer</p>
-            <a href="path/to/your-cv.pdf" class="btn" download>Download CV</a>
+            <div class="hero-text">
+                <h1>Hello, I'm <span>Mayank Patel</span></h1>
+                <p>Web Developer | Designer | Programmer</p>
+                <a href="path/to/your-cv.pdf" class="btn" download>Download CV</a>
+            </div>
+            <div class="hero-image">
+                <img src="my.png" alt="Mayank Patel">
+            </div>
         </div>
     </section>
 
@@ -44,30 +56,56 @@
     <section id="skills" class="animate">
         <div class="container">
             <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill">HTML</div>
-                <div class="skill">CSS</div>
-                <div class="skill">JavaScript</div>
-                <div class="skill">C</div>
-                <div class="skill">C++</div>
-                <div class="skill">Python</div>
+            <div class="roadmap">
+                <div class="roadmap-item">
+                    <div class="roadmap-content">
+                        <h3>HTML</h3>
+                        <p>Experience in creating structured web pages.</p>
+                    </div>
+                </div>
+                <div class="roadmap-item">
+                    <div class="roadmap-content">
+                        <h3>CSS</h3>
+                        <p>Proficient in styling and responsive design.</p>
+                    </div>
+                </div>
+                <div class="roadmap-item">
+                    <div class="roadmap-content">
+                        <h3>JavaScript</h3>
+                        <p>Skilled in creating interactive web elements.</p>
+                    </div>
+                </div>
+                <div class="roadmap-item">
+                    <div class="roadmap-content">
+                        <h3>C</h3>
+                        <p>Solid understanding of system programming.</p>
+                    </div>
+                </div>
+                <div class="roadmap-item">
+                    <div class="roadmap-content">
+                        <h3>C++</h3>
+                        <p>Expertise in object-oriented programming.</p>
+                    </div>
+                </div>
+                <div class="roadmap-item">
+                    <div class="roadmap-content">
+                        <h3>Python</h3>
+                        <p>Advanced skills in scripting and automation.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="animate">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="projects-grid">
+<section id="projects" class="animate">
+    <div class="container">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <div class="project-part">
                 <div class="project-card">
                     <h3>Desktop App Notifier</h3>
-                    <p>A Desktop Notifier is a straightforward application that generates a notification message in the form of a pop-up message on the desktop.</p>
-                </div>
-                <div class="project-card">
-                    <h3>QR Code Generator</h3>
-                    <p>A QR code generator is a tool or software that creates Quick Response codes. These codes can be scanned using a QR code reader, typically available on smartphones, to quickly access the encoded information.</p>
-                    <img src="ss.png" alt="QR Code" class="project-image">
+                    <p>A Desktop Notifier is a straightforward application that generates a notification message in the form of a pop-up message on the desktop.</p>
                 </div>
                 <div class="project-card">
                     <h3>Flappy Birdie</h3>
@@ -75,18 +113,27 @@
                     <a href="https://flappy-birdie-two.vercel.app/" class="btn" target="_blank">Play Flappy Bird</a>
                 </div>
             </div>
+            <div class="project-part">
+                <div class="project-card">
+                    <h3>QR Code Generator</h3>
+                    <p>A QR code generator is a tool or software that creates Quick Response codes. These codes can be scanned using a QR code reader, typically available on smartphones, to quickly access the encoded information.</p>
+                    <img src="ss.png" alt="QR Code" class="project-image">
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
+
 
     <!-- Contact Section -->
     <section id="contact" class="animate">
         <div class="container">
             <h2>Contact Me</h2>
             <p>If you have any questions or want to get in touch, feel free to contact me through the following:</p>
-            <form class="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" required></textarea>
+            <form class="contact-form" id="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
                 <button type="submit" class="btn">Send Message</button>
             </form>
             <ul>
@@ -96,15 +143,16 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Mayank Patel. All Rights Reserved.</p>
-        </div>
-    </footer>
-
+    <!-- JavaScript -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Image click event to navigate to the About section
+            const heroImage = document.querySelector('.hero img');
+            heroImage.addEventListener('click', function() {
+                window.location.href = '#about';
+            });
+
+            // Animation observer code
             const elements = document.querySelectorAll('.animate');
             const options = {
                 threshold: 0.1
@@ -120,6 +168,39 @@
 
             elements.forEach(element => {
                 observer.observe(element);
+            });
+
+            // Skill bar animation
+            const skillBars = document.querySelectorAll('.skill-percentage');
+            skillBars.forEach(bar => {
+                bar.style.width = '0';
+            });
+
+            const skillObserver = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const bar = entry.target;
+                        bar.style.width = bar.getAttribute('style').split(':')[1];
+                        observer.unobserve(bar);
+                    }
+                });
+            }, options);
+
+            skillBars.forEach(bar => {
+                skillObserver.observe(bar);
+            });
+
+            // EmailJS integration
+            const contactForm = document.getElementById('contact-form');
+            contactForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+                    .then(function() {
+                        alert('Message sent successfully!');
+                    }, function(error) {
+                        alert('Failed to send message. Please try again later.');
+                    });
             });
         });
     </script>
