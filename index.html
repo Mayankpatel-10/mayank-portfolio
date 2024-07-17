@@ -3,138 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mayank personal portfolio</title>
-    <link rel="stylesheet" href="pf.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function() {
-            emailjs.init('642187dc-4e33-449a-8f57-670c845a6b9b'); 
-        })();
-    </script>
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
-<body>
-    <!-- Header -->
+<body class="light-theme">
     <header>
         <nav>
-            <div class="logo">MP</div>
-            <ul class="nav-links">
+            <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li id="theme-toggle"><img src="sun.png" alt="Toggle Theme"></li>
             </ul>
         </nav>
+        
     </header>
-
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
             <div class="hero-text">
-                <h1>Hello, I'm <span>Mayank Patel</span></h1>
-                <p>Web Developer | Designer | Programmer</p>
+                <h1>Hello, I'm <span id="name-span">Mayank Patel</span></h1>
+                <p><span id="role-span">Web Developer | Designer | Programmer</span></p>
             </div>
             <div class="hero-image">
                 <img src="my.png" alt="Mayank Patel">
             </div>
         </div>
     </section>
-
-    <!-- About Section -->
-    <section id="about" class="animate">
-        <div class="container">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <p>Hello! I am Mayank Patel, a passionate and dedicated web developer with a knack for creating dynamic and responsive websites. With a strong background in programming and design, I aim to build websites that not only look great but also provide a seamless user experience.</p>
+    
+    <main>
+        <section id="home" class="section shadow">
+            <h1>Welcome to My Portfolio</h1>
+            <p>I am a Web Developer and Photographer</p>
+        </section>
+        
+        <!-- About Section -->
+        <section id="about" class="section animate shadow">
+            <div class="container">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <p>Hello! I am Mayank Patel, a passionate and dedicated web developer with a knack for creating dynamic and responsive websites. With a strong background in programming and design, I aim to build websites that not only look great but also provide a seamless user experience.</p>
+                </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-<section id="education" class="animate">
-    <div class="container">
-        <h2>Education</h2>
-        <div class="education-content">
-            <div class="education-item">
-                <h3>B.tech Computer Science Engineering</h3>
-                <p>Galgotias University, 2023 - 2027</p>
-                <p>Currently I'm Pursuing B.tech C.S.E in Galgotias University</p>
-            </div>
-            <div class="education-item">
-                <h3>High School</h3>
-                <p>10th from High School Patner in 2020</p>
-                <p>12th from +2 Meghray Mishri Prasad Uchh Vidyalaya, Walipur in 2023</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-    <!-- Skills Section -->
-    <section id="skills" class="animate">
-        <div class="container">
-            <h2>Skills</h2>
-            <div class="roadmap">
-                <div class="roadmap-item">
-                    <div class="roadmap-content">
-                        <h3>HTML</h3>
-                        <p>Experience in creating structured web pages.</p>
+        </section>
+        
+        <!-- Skills Section -->
+        <section id="skills" class="section animate shadow">
+            <div class="container">
+                <h2>Skills</h2>
+                <div class="roadmap">
+                    <div class="roadmap-item">
+                        <div class="roadmap-content">
+                            <h3>HTML</h3>
+                            <p>Experience in creating structured web pages.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="roadmap-item">
-                    <div class="roadmap-content">
-                        <h3>CSS</h3>
-                        <p>Proficient in styling and responsive design.</p>
+                    <div class="roadmap-item">
+                        <div class="roadmap-content">
+                            <h3>CSS</h3>
+                            <p>Proficient in styling and responsive design.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="roadmap-item">
-                    <div class="roadmap-content">
-                        <h3>JavaScript</h3>
-                        <p>Skilled in creating interactive web elements.</p>
+                    <div class="roadmap-item">
+                        <div class="roadmap-content">
+                            <h3>JavaScript</h3>
+                            <p>Skilled in creating interactive web elements.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="roadmap-item">
-                    <div class="roadmap-content">
-                        <h3>C</h3>
-                        <p>Solid understanding of system programming.</p>
+                    <div class="roadmap-item">
+                        <div class="roadmap-content">
+                            <h3>C</h3>
+                            <p>Solid understanding of system programming.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="roadmap-item">
-                    <div class="roadmap-content">
-                        <h3>C++</h3>
-                        <p>Expertise in object-oriented programming.</p>
+                    <div class="roadmap-item">
+                        <div class="roadmap-content">
+                            <h3>C++</h3>
+                            <p>Expertise in object-oriented programming.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="roadmap-item">
-                    <div class="roadmap-content">
-                        <h3>Python</h3>
-                        <p>Advanced skills in scripting and automation.</p>
+                    <div class="roadmap-item">
+                        <div class="roadmap-content">
+                            <h3>Python</h3>
+                            <p>Advanced skills in scripting and automation.</p>
+                        </div>
+                    </div>
+                    <div class="roadmap-item">
+                        <div class="roadmap-content">
+                            <h3>Photography</h3>
+                            <p>Passionate about capturing moments and storytelling through images.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-<section id="projects" class="animate">
+        </section>
+        
+        <!-- Projects Section -->
+<section id="projects" class="section animate shadow">
     <div class="container">
         <h2>Projects</h2>
-        <div class="projects-grid">
-            <div class="project-part">
-                <div class="project-card">
+        <div class="roadmap">
+            <div class="roadmap-item">
+                <div class="roadmap-content">
                     <h3>Desktop App Notifier</h3>
                     <p>A Desktop Notifier is a straightforward application that generates a notification message in the form of a pop-up message on the desktop.</p>
                 </div>
-                <div class="project-card">
+            </div>
+            <div class="roadmap-item">
+                <div class="roadmap-content">
                     <h3>Flappy Birdie</h3>
                     <p>Flappy Bird is a simple and addictive arcade-style game where the player controls a bird that moves to the right and has to avoid hitting pipes.</p>
                     <a href="https://flappy-birdie-two.vercel.app/" class="btn" target="_blank">Play Flappy Bird</a>
                 </div>
             </div>
-            <div class="project-part">
-                <div class="project-card">
+            <div class="roadmap-item">
+                <div class="roadmap-content">
                     <h3>QR Code Generator</h3>
                     <p>A QR code generator is a tool or software that creates Quick Response codes. These codes can be scanned using a QR code reader, typically available on smartphones, to quickly access the encoded information.</p>
                     <img src="ss.png" alt="QR Code" class="project-image">
@@ -144,102 +130,40 @@
     </div>
 </section>
 
+        
+        <!-- Contact Section -->
+        <section id="contact" class="section animate shadow">
+            <div class="container">
+                <h2>Contact Me</h2>
+                <p>If you have any questions or want to get in touch, feel free to contact me through the following:</p>
+                <form action="https://api.web3forms.com/submit" method="POST">
 
-   <!-- Contact Section -->
-<section id="contact" class="animate">
-    <div class="container">
-        <h2>Contact Me</h2>
-        <p>If you have any questions or want to get in touch, feel free to contact me through the following:</p>
-        <form action="https://api.web3forms.com/submit" method="POST">
-
-            <!-- Replace with your Access Key -->
-            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
-
-            <!-- Form Inputs with Labels -->
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Your Email</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">Your Message</label>
-            <textarea id="message" name="message" required></textarea>
-
-            <!-- Honeypot Spam Protection -->
-            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-
-            <!-- Custom Confirmation / Success Page -->
-            <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
-
-            <button type="submit">Submit Form</button>
-
-        </form>
-        <ul>
-            <li>Email: <a href="mailto:mayankpatelmehta@gmail.com">mayankpatelmehta@gmail.com</a></li>
-            <li>LinkedIn: <a href="https://www.linkedin.com/in/mayank-patel-a1b3441b3" target="_blank">www.linkedin.com/in/mayank-patel-a1b3441b3</a></li>
-        </ul>
-    </div>
-
-    <!-- JavaScript -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Image click event to navigate to the About section
-            const heroImage = document.querySelector('.hero img');
-            heroImage.addEventListener('click', function() {
-                window.location.href = '#about';
-            });
-
-            // Animation observer code
-            const elements = document.querySelectorAll('.animate');
-            const options = {
-                threshold: 0.1
-            };
-            const observer = new IntersectionObserver(function(entries, observer) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('fade-in');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, options);
-
-            elements.forEach(element => {
-                observer.observe(element);
-            });
-
-            // Skill bar animation
-            const skillBars = document.querySelectorAll('.skill-percentage');
-            skillBars.forEach(bar => {
-                bar.style.width = '0';
-            });
-
-            const skillObserver = new IntersectionObserver(function(entries, observer) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const bar = entry.target;
-                        bar.style.width = bar.getAttribute('style').split(':')[1];
-                        observer.unobserve(bar);
-                    }
-                });
-            }, options);
-
-            skillBars.forEach(bar => {
-                skillObserver.observe(bar);
-            });
-
-            // EmailJS integration
-            const contactForm = document.getElementById('contact-form');
-            contactForm.addEventListener('submit', function(event) {
-                event.preventDefault();
-
-                emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
-                    .then(function() {
-                        alert('Message sent successfully!');
-                    }, function(error) {
-                        alert('Failed to send message. Please try again later.');
-                    });
-            });
-        });
-    </script>
+                    <!-- Replace with your Access Key -->
+                    <input type="hidden" name="access_key" value="642187dc-4e33-449a-8f57-670c845a6b9b">
+                
+                    <!-- Form Inputs. Each input must have a name="" attribute -->
+                    <label for="name">Name</label>
+                    <input type="text" name="name" required>
+                    <label for="email">Your Email</label>
+                    <input type="email" name="email" required>
+                    <label for="message">Your Message</label>
+                    <textarea name="message" required></textarea>
+                
+                    <!-- Honeypot Spam Protection -->
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                
+                    <!-- Custom Confirmation / Success Page -->
+                    <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+                
+                    <button type="submit">Submit Form</button>
+                
+                </form>
+                <ul>
+                    <li>Email: <a href="mailto:mayankpatelmehta@gmail.com">mayankpatelmehta@gmail.com</a></li>
+                    <li>LinkedIn: <a href="https://www.linkedin.com/in/mayank-patel-a1b3441b3" target="_blank">www.linkedin.com/in/mayank-patel-a1b3441b3</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
