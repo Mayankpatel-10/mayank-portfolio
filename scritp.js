@@ -1,5 +1,3 @@
-/* script.js */
-
 document.addEventListener('DOMContentLoaded', () => {
     const themeToggleBtn = document.getElementById('theme-toggle');
     const body = document.body;
@@ -10,10 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
     themeToggleBtn.addEventListener('click', () => {
         body.classList.toggle('dark-theme');
         body.classList.toggle('light-theme');
-    });
-
-    navToggleBtn.addEventListener('click', () => {
-        nav.classList.toggle('open');
     });
 
     const handleScroll = () => {
@@ -29,5 +23,15 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Initial check on page load
+    handleScroll();
+
+    navToggleBtn.addEventListener('click', () => {
+        if (nav.classList.contains('open')) {
+            nav.classList.add('fade-out');
+            nav.classList.remove('open');
+            setTimeout(() => nav.classList.remove('fade-out'), 300); // match transition duration
+        } else {
+            nav.classList.add('open');
+        }
+    });
 });
