@@ -34,4 +34,13 @@ document.addEventListener('DOMContentLoaded', () => {
             nav.classList.add('open');
         }
     });
+
+    // Add click event for skill photos
+    const skillPhotos = document.querySelectorAll('.skill-photo img');
+    skillPhotos.forEach(photo => {
+        photo.addEventListener('click', () => {
+            const parent = photo.closest('.roadmap-item');
+            parent.classList.toggle('open');
+        });
+    });
 });
