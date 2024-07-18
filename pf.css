@@ -1,5 +1,3 @@
-/* styles.css */
-
 /* Basic resets and theme settings */
 * {
     margin: 0;
@@ -16,7 +14,7 @@ body {
 }
 
 :root {
-    --bg-color-light: #694a86;
+    --bg-color-light: #d1c0f1;
     --bg-color-dark: #120625;
     --text-color-light: #000000;
     --text-color-dark: #ffffff;
@@ -29,51 +27,14 @@ body.light-theme {
     --bg-color: var(--bg-color-light);
     --text-color: var(--text-color-light);
     --header-bg: var(--header-bg-light);
+    --box-border-color: #000000; /* Black border for light theme */
 }
 
 body.dark-theme {
     --bg-color: var(--bg-color-dark);
     --text-color: var(--text-color-dark);
     --header-bg: var(--header-bg-dark);
-}
-
-/* styles.css */
-
-/* Basic resets and theme settings */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    transition: all 0.3s ease;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    color: var(--text-color);
-    background-color: var(--bg-color);
-    transition: background-color 0.5s, color 0.5s;
-}
-
-:root {
-    --bg-color-light: #694a86;
-    --bg-color-dark: #120625;
-    --text-color-light: #000000;
-    --text-color-dark: #ffffff;
-    --accent-color: #6200ea;
-    --header-bg-light: #f8f9fa;
-    --header-bg-dark: #343a40;
-}
-
-body.light-theme {
-    --bg-color: var(--bg-color-light);
-    --text-color: var(--text-color-light);
-    --header-bg: var(--header-bg-light);
-}
-
-body.dark-theme {
-    --bg-color: var(--bg-color-dark);
-    --text-color: var(--text-color-dark);
-    --header-bg: var(--header-bg-dark);
+    --box-border-color: #ffffff; /* White border for dark theme */
 }
 
 /* Navigation styling */
@@ -92,9 +53,7 @@ nav ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    flex-wrap: wrap;
 }
 
 nav ul li {
@@ -108,60 +67,92 @@ nav ul li a, #theme-toggle {
     border-radius: 5px;
 }
 
+nav ul li button {
+    padding: 5px 10px;
+    border: none;
+    background-color: var(--accent-color);
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#theme-toggle {
+    cursor: pointer;
+    background-color: var(--accent-color);
+    color: #ffffff;
+    border: none;
+}
+
+nav ul li#theme-toggle {
+    margin-left: auto; /* Pushes the toggle to the right */
+}
+
 nav ul li#theme-toggle img {
-    width: 30px;
+    width: 30px; /* Adjust size as needed */
     height: auto;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
 }
 
-.nav-toggle {
+body.light-theme img#theme-toggle {
+    transform: rotate(0deg); /* Sun icon */
+}
+
+body.dark-theme img#theme-toggle {
+    transform: rotate(180deg); /* Moon icon */
+}
+
+/* Hamburger Menu */
+#nav-toggle {
     display: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+}
+
+nav ul.open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--header-bg);
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    z-index: 999;
+}
+
+nav ul.open li {
+    margin: 10px 0;
+}
+
+nav ul.fade-out {
+    animation: fadeOut 0.3s forwards;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
 }
 
 @media (max-width: 768px) {
     nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-        position: absolute;
-        top: 60px; /* Adjust this value based on the height of your header */
-        left: 0;
-        width: 100%;
-        background-color: var(--header-bg);
-        box-shadow: 0 4px 2px -2px gray;
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.3s ease, transform 0.3s ease;
+        display: none;
     }
 
     nav ul.open {
-        opacity: 1;
-        pointer-events: auto;
+        display: flex;
     }
 
-    nav ul.fade-out {
-        opacity: 0;
-        pointer-events: none;
-    }
-
-    .nav-toggle {
+    #nav-toggle {
         display: block;
-        cursor: pointer;
-        font-size: 24px;
-        color: var(--text-color);
     }
 }
 
-/* Theme toggle icon rotation for dark and light themes */
-body.light-theme img#theme-toggle {
-    transform: rotate(0deg);
-}
-
-body.dark-theme img#theme-toggle {
-    transform: rotate(180deg);
-}
-
-/* Hero section */
+/* Hero section animation */
 .hero {
     height: 100vh;
     display: flex;
@@ -173,15 +164,21 @@ body.dark-theme img#theme-toggle {
     animation: fadeIn 1s ease-in-out forwards; /* Animation added */
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .hero-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.hero-text {
-    margin-top: 20px; /* Add margin to create space below the image */
-    text-align: center; /* Center align text */
 }
 
 .hero-text h1 {
@@ -277,7 +274,7 @@ body.dark-theme img#theme-toggle {
     width: 80%;
     padding: 1.5rem;
     background-color: var(--bg-color);
-    border: 1px solid #ddd;
+    border: 1px solid var(--box-border-color); /* Use variable for border color */
     border-radius: 8px;
     text-align: left;
     transition: transform 0.3s;
@@ -337,29 +334,28 @@ body.dark-theme img#theme-toggle {
     margin: 0 auto;
 }
 
-/* Contact Section */
+* Contact Section */
 #contact {
+    background-color: #1b1b3a;
+    box-shadow: 0 4px 6px #ff6f61;
     padding: 60px 20px;
-    text-align: center;
-    background-color: var(--bg-color); /* Use the background color variable */
-    color: var(--text-color); /* Use the text color variable */
-    animation: fadeInUp 1s forwards; /* Animation to fade in */
 }
 
 #contact h2 {
     font-size: 2.5rem;
+    text-align: center;
     margin-bottom: 40px;
-    color: var(--accent-color); /* Accent color */
+    color: #ff6f61;
 }
 
 #contact .container {
-    max-width: 1000px;
-    margin: 0 auto;
+    text-align: center;
 }
 
 #contact p {
-    font-size: 1.2rem;
-    margin-bottom: 40px;
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    color: #ffffff;
 }
 
 #contact form {
@@ -376,10 +372,8 @@ body.dark-theme img#theme-toggle {
     margin: 8px 0;
     border-radius: 4px;
     box-sizing: border-box;
-    background-color: var(--bg-color); /* Use the background color variable */
-    color: var(--text-color); /* Use the text color variable */
-    border: 1px solid #ccc;
-    transition: border-color 0.3s, box-shadow 0.3s;
+    background-color: #0b0c21;
+    box-shadow: 0 4px 6px #ff6f61;
 }
 
 #contact form input[type="checkbox"] {
@@ -387,7 +381,7 @@ body.dark-theme img#theme-toggle {
 }
 
 #contact form button {
-    background-color: var(--accent-color); /* Accent color */
+    background-color: #ff6f61;
     color: #ffffff;
     padding: 12px 24px;
     border: none;
@@ -398,7 +392,8 @@ body.dark-theme img#theme-toggle {
 }
 
 #contact form button:hover {
-    background-color: #6200ea; /* Darker shade of accent color on hover */
+    background-color: #ffffff;
+    color: #ff6f61;
     transform: scale(1.05);
 }
 
@@ -414,11 +409,64 @@ body.dark-theme img#theme-toggle {
 }
 
 #contact ul li a {
-    color: var(--accent-color); /* Accent color */
+    color: #ffffff;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 #contact ul li a:hover {
-    color: #6200ea; /* Darker shade of accent color on hover */
+    color: #ff6f61;
+}
+
+
+/* Footer */
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: var(--bg-color); /* Use the background color variable */
+    color: var(--text-color); /* Use the text color variable */
+    border-top: 1px solid var(--accent-color); /* Accent color for border */
+}
+
+/* Skills section */
+.skill-photo img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.skill-photo img:hover {
+    transform: scale(1.1);
+}
+
+.hidden {
+    display: none;
+}
+
+.roadmap-content {
+    text-align: left;
+    margin-top: 10px;
+}
+
+.roadmap-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.roadmap-item.open .hidden {
+    display: block;
+}
+
+#my-image{
+    transform: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+#my-image:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
