@@ -4,10 +4,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeToggleBtn = document.getElementById('theme-toggle');
     const body = document.body;
     const sections = document.querySelectorAll('.animate');
+    const navToggleBtn = document.getElementById('nav-toggle');
+    const nav = document.querySelector('nav ul');
 
     themeToggleBtn.addEventListener('click', () => {
         body.classList.toggle('dark-theme');
         body.classList.toggle('light-theme');
+    });
+
+    navToggleBtn.addEventListener('click', () => {
+        nav.classList.toggle('open');
     });
 
     const handleScroll = () => {
@@ -23,8 +29,5 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Initial check on page load
+    handleScroll(); // Initial check on page load
 });
-
-
-
