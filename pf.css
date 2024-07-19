@@ -374,7 +374,7 @@ nav ul.fade-out {
 #contact p {
     font-size: 1.25rem;
     margin-bottom: 20px;
-    color: #ffffff;
+    color: var(--text-color);
 }
 
 #contact form {
@@ -391,7 +391,7 @@ nav ul.fade-out {
     margin: 8px 0;
     border-radius: 4px;
     box-sizing: border-box;
-    background-color: #0b0c21;
+    background-color: whitesmoke;
     box-shadow: 0 4px 6px #ff6f61;
 }
 
@@ -428,7 +428,7 @@ nav ul.fade-out {
 }
 
 #contact ul li a {
-    color: #ffffff;
+    color: var(--text-color);
     text-decoration: none;
     transition: color 0.3s;
 }
