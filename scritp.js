@@ -43,4 +43,29 @@ document.addEventListener('DOMContentLoaded', () => {
             parent.classList.toggle('open');
         });
     });
+
+    // Modal functionality for project images
+    const modal = document.getElementById('image-modal');
+    const modalImg = document.getElementById('modal-image');
+    const captionText = document.getElementById('caption');
+    const projectImages = document.querySelectorAll('.project-gallery img');
+    const closeBtn = document.getElementsByClassName('close')[0];
+
+    projectImages.forEach(img => {
+        img.addEventListener('click', () => {
+            modal.style.display = 'block';
+            modalImg.src = img.src;
+            captionText.innerHTML = img.alt;
+        });
+    });
+
+    closeBtn.onclick = () => {
+        modal.style.display = 'none';
+    };
+
+    window.onclick = (event) => {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    };
 });
