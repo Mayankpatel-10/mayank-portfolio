@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio</title>
-    <link rel="stylesheet" href="pf.css">
-    <script defer src="scritp.js"></script>
+    <title>Mayank Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body class="light-theme">
     <header>
@@ -26,7 +26,7 @@
         <div class="hero-content">
             <div class="hero-text">
                 <h1>Hello, I'm <span id="name-span">Mayank Patel</span></h1>
-                <p><span id="role-span">Web Developer | Designer | Programmer</span></p>
+                <p><span id="role-span">Web Developer | Photographer | Programmer</span></p>
             </div>
             <div class="hero-image">
                 <img src="my.png" alt="Mayank Patel">
@@ -122,33 +122,54 @@
         </section>
         
         <!-- Projects Section -->
-<section id="projects" class="section animate shadow">
-    <div class="container">
-        <h2>Projects</h2>
-        <div class="roadmap">
-            <div class="roadmap-item">
-                <div class="roadmap-content">
-                    <h3>Desktop App Notifier</h3>
-                    <p>A Desktop Notifier is a straightforward application that generates a notification message in the form of a pop-up message on the desktop.</p>
+        <section id="projects" class="section animate shadow">
+            <div class="container">
+                <h2>Projects</h2>
+                <div class="roadmap">
+                    <div class="roadmap-item">
+                        <div class="roadmap-content">
+                            <h3>Desktop App Notifier</h3>
+                            <p>A Desktop Notifier is a straightforward application that generates a notification message in the form of a pop-up message on the desktop.</p>
+                        </div>
+                    </div>
+                    <div class="roadmap-item">
+                        <div class="roadmap-content">
+                            <h3>Flappy Birdie</h3>
+                            <p>Flappy Bird is a simple and addictive arcade-style game where the player controls a bird that moves to the right and has to avoid hitting pipes.</p>
+                            <a href="https://flappy-birdie-two.vercel.app/" class="btn" target="_blank">Play Flappy Bird</a>
+                        </div>
+                    </div>
+                    <div class="roadmap-item">
+                        <div class="roadmap-content">
+                            <h3>QR Code Generator</h3>
+                            <p>A QR code generator is a tool or software that creates Quick Response codes. These codes can be scanned using a QR code reader, typically available on smartphones, to quickly access the encoded information.</p>
+                            <img src="ss.png" alt="QR Code" class="project-image">
+                        </div>
+                    </div>
+                    <div class="roadmap-item">
+                        <div class="roadmap-content">
+                            <h3>Photography</h3>
+                            <p>Description of the new project goes here. This project includes multiple photos to showcase different aspects.</p>
+                            <div class="project-gallery">
+                                <img src="ig.jpg" alt="Project Photo 1">
+                                <img src="crg.jpg" alt="Project Photo 3">
+                                <img src="ss.jpg" alt="Project Photo 4">
+                                <img src="hos.jpg" alt="Project Photo 5">
+                                <img src="rly.jpg" alt="Project Photo 6">
+                                <img src="guev.jpg" alt="Project Photo 7">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="roadmap-item">
-                <div class="roadmap-content">
-                    <h3>Flappy Birdie</h3>
-                    <p>Flappy Bird is a simple and addictive arcade-style game where the player controls a bird that moves to the right and has to avoid hitting pipes.</p>
-                    <a href="https://flappy-birdie-two.vercel.app/" class="btn" target="_blank">Play Flappy Bird</a>
-                </div>
-            </div>
-            <div class="roadmap-item">
-                <div class="roadmap-content">
-                    <h3>QR Code Generator</h3>
-                    <p>A QR code generator is a tool or software that creates Quick Response codes. These codes can be scanned using a QR code reader, typically available on smartphones, to quickly access the encoded information.</p>
-                    <img src="ss.png" alt="QR Code" class="project-image">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
+
+        <!-- Modal for enlarged images -->
+<div id="image-modal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-image">
+    <div id="caption"></div>
+</div>
 
         
         <!-- Contact Section -->
