@@ -3,208 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mayank Personal Portfolio</title>
-    <link rel="stylesheet" href="pf.css">
-    <script defer src="scritp.js"></script>
+    <title>Mayank Patel - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script defer src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body class="light-theme">
+<body>
     <header>
-        <div class="nav-toggle" id="nav-toggle">☰</div>
+        <div class="logo">Mayank's Portfolio</div>
         <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li id="theme-toggle"><img src="sun.png" alt="Toggle Theme"></li>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <!-- Hero Section -->
+
     <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1>Hello, I'm <span id="name-span">Mayank Patel</span></h1>
-                <p><span id="role-span">Web Developer | Photographer | Programmer</span></p>
-            </div>
-            <div class="hero-image">
-                <img src="my.png" alt="Mayank Patel">
-            </div>
-        </div>
+      <div id="particles-js"></div>
+      <div class="hero-content">
+          <h1>Hello, I'm <span class="highlight">Mayank Patel</span></h1>
+          <p>Web Developer | Full Stack Developer | Programmer</p>
+          <img src="my1234.jpeg.jpg" alt="Mayank Patel" class="hero-image">
+      </div>
     </section>
-    
-    <main>
-        <section id="home" class="section shadow">
-            <h1>Welcome to My Portfolio</h1>
-            <p>I am a Web Developer and Photographer</p>
-        </section>
-        
-        <!-- About Section -->
-        <section id="about" class="section animate shadow">
-            <div class="container">
-                <h2>About Me</h2>
-                <div class="about-content">
-                    <p>Hello! I am Mayank Patel, a passionate and dedicated web developer with a knack for creating dynamic and responsive websites. With a strong background in programming and design, I aim to build websites that not only look great but also provide a seamless user experience.</p>
-                </div>
-            </div>
-        </section>
-        
-        <section id="skills" class="section animate shadow">
-            <div class="container">
-                <h2>Skills</h2>
-                <div class="roadmap">
-                    <div class="roadmap-item">
-                        <div class="skill-photo">
-                            <img src="html.png" alt="HTML">
-                        </div>
-                        <div class="roadmap-content hidden">
-                            <h3>HTML</h3>
-                            <p>Experience in creating structured web pages.</p>
-                        </div>
-                    </div>
-                    <div class="roadmap-item">
-                        <div class="skill-photo">
-                            <img src="css.png" alt="CSS">
-                        </div>
-                        <div class="roadmap-content hidden">
-                            <h3>CSS</h3>
-                            <p>Proficient in styling and responsive design.</p>
-                        </div>
-                    </div>
-                    <div class="roadmap-item">
-                        <div class="skill-photo">
-                            <img src="js.png" alt="JavaScript">
-                        </div>
-                        <div class="roadmap-content hidden">
-                            <h3>JavaScript</h3>
-                            <p>Skilled in creating interactive web elements.</p>
-                        </div>
-                    </div>
-                    <div class="roadmap-item">
-                        <div class="skill-photo">
-                            <img src="c.png" alt="C">
-                        </div>
-                        <div class="roadmap-content hidden">
-                            <h3>C</h3>
-                            <p>Solid understanding of system programming.</p>
-                        </div>
-                    </div>
-                    <div class="roadmap-item">
-                        <div class="skill-photo">
-                            <img src="code.png" alt="C++">
-                        </div>
-                        <div class="roadmap-content hidden">
-                            <h3>C++</h3>
-                            <p>Expertise in object-oriented programming.</p>
-                        </div>
-                    </div>
-                    <div class="roadmap-item">
-                        <div class="skill-photo">
-                            <img src="py.png" alt="Python">
-                        </div>
-                        <div class="roadmap-content hidden">
-                            <h3>Python</h3>
-                            <p>Advanced skills in scripting and automation.</p>
-                        </div>
-                    </div>
-                    <div class="roadmap-item">
-                        <div class="skill-photo">
-                            <img src="cam.png" alt="Photography">
-                        </div>
-                        <div class="roadmap-content hidden">
-                            <h3>Photography</h3>
-                            <p>Passionate about capturing moments and storytelling through images.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Projects Section -->
-        <section id="projects" class="section animate shadow">
-            <div class="container">
-                <h2>Projects</h2>
-                <div class="roadmap">
-                    <div class="roadmap-item">
-                        <div class="roadmap-content">
-                            <h3>Desktop App Notifier</h3>
-                            <p>A Desktop Notifier is a straightforward application that generates a notification message in the form of a pop-up message on the desktop.</p>
-                        </div>
-                    </div>
-                    <div class="roadmap-item">
-                        <div class="roadmap-content">
-                            <h3>Flappy Birdie</h3>
-                            <p>Flappy Bird is a simple and addictive arcade-style game where the player controls a bird that moves to the right and has to avoid hitting pipes.</p>
-                            <a href="https://flappy-birdie-two.vercel.app/" class="btn" target="_blank">Play Flappy Bird</a>
-                        </div>
-                    </div>
-                    <div class="roadmap-item">
-                        <div class="roadmap-content">
-                            <h3>QR Code Generator</h3>
-                            <p>A QR code generator is a tool or software that creates Quick Response codes. These codes can be scanned using a QR code reader, typically available on smartphones, to quickly access the encoded information.</p>
-                            <img src="ss.png" alt="QR Code" class="project-image">
-                        </div>
-                    </div>
-                    <div class="roadmap-item">
-                        <div class="roadmap-content">
-                            <h3>Photography</h3>
-                            <p>Description of the new project goes here. This project includes multiple photos to showcase different aspects.</p>
-                            <div class="project-gallery">
-                                <img src="ig.jpg" alt="India Gate">
-                                <img src="crg.jpg" alt="sky Ldh ">
-                                <img src="ss.jpg" alt="Sun Rays">
-                                <img src="hos.jpg" alt="Gu boys Hostel">
-                                <img src="rly.jpg" alt="House Top">
-                                <img src="guev.jpg" alt="Sunset at Gu">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Modal for enlarged images -->
-<div id="image-modal" class="modal">
-    <span class="close">&times;</span>
-    <img class="modal-content" id="modal-image">
-    <div id="caption"></div>
-</div>
+    <section id="about" class="section">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-content">
+          <img src="mayanak.jpeg.jpg" alt="About Me Image" class="about-image">
+          <p class="about-text">I am Mayank Patel, a passionate web developer and photographer who creates dynamic and visually stunning websites.</p>
+      </div>
+    </section>
 
-        
-        <!-- Contact Section -->
-        <section id="contact" class="section animate shadow">
-            <div class="container">
-                <h2>Contact Me</h2>
-                <p>If you have any questions or want to get in touch, feel free to contact me through the following:</p>
-                <form action="https://api.web3forms.com/submit" method="POST">
-
-                    <!-- Replace with your Access Key -->
-                    <input type="hidden" name="access_key" value="642187dc-4e33-449a-8f57-670c845a6b9b">
-                
-                    <!-- Form Inputs. Each input must have a name="" attribute -->
-                    <label for="name">Name</label>
-                    <input type="text" name="name" required>
-                    <label for="email">Your Email</label>
-                    <input type="email" name="email" required>
-                    <label for="message">Your Message</label>
-                    <textarea name="message" required></textarea>
-                
-                    <!-- Honeypot Spam Protection -->
-                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-                
-                    <!-- Custom Confirmation / Success Page -->
-                    <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
-                
-                    <button type="submit">Submit Form</button>
-                
-                </form>
-                <ul>
-                    <li>Email: <a href="mailto:mayankpatelmehta@gmail.com">mayankpatelmehta@gmail.com</a></li>
-                    <li>LinkedIn: <a href="https://www.linkedin.com/in/mayank-patel-a1b3441b3" target="_blank">www.linkedin.com/in/mayank-patel-a1b3441b3</a></li>
-                </ul>
+    <section id="skills" class="section">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-container">
+          <div class="skill">
+            <div class="skill-info">
+              <span class="skill-name">HTML</span>
             </div>
-        </section>
-    </main>
+            <div class="progress-bar">
+              <div class="progress" style="width: 95%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill-info">
+              <span class="skill-name">CSS</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress" style="width: 90%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill-info">
+              <span class="skill-name">JavaScript</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress" style="width: 85%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill-info">
+              <span class="skill-name">Java</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress" style="width: 75%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill-info">
+              <span class="skill-name">Python</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress" style="width: 89%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill-info">
+              <span class="skill-name">UI Design</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress" style="width: 78%;"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+    <section id="projects" class="section">
+        <h2 class="section-title">Projects</h2>
+        <div class="roadmap">
+          <div class="roadmap-item">
+            <div class="dot"></div>
+            <div class="content">
+              <h3>Flappy Bird</h3>
+              <p>A fun browser-based game inspired by the classic Flappy Bird.</p>
+            </div>
+          </div>
+          <div class="roadmap-item">
+            <div class="dot"></div>
+            <div class="content">
+              <h3>QR Code Generator</h3>
+              <p>An application to generate QR codes for text, URLs, and more.</p>
+            </div>
+          </div>
+          <div class="roadmap-item">
+            <div class="dot"></div>
+            <div class="content">
+              <h3>Desktop App Notifier</h3>
+              <p>A desktop application to manage and display timely notifications.</p>
+            </div>
+          </div>
+          <div class="roadmap-item">
+            <div class="dot"></div>
+            <div class="content">
+              <h3>Chat Bot AI</h3>
+              <p>AI that helps students make future career decisions.</p>
+            </div>
+          </div>
+          <div class="roadmap-item">
+            <div class="dot"></div>
+            <div class="content">
+              <h3>Autonomous Fleet Management System</h3>
+              <p>A system designed to manage and control a fleet of autonomous vehicles.</p>
+            </div>
+          </div>
+          <div class="roadmap-item">
+            <div class="dot"></div>
+            <div class="content">
+              <h3>Airline Reservation System</h3>
+              <p>Software to manage airline inventory, schedules, and reservations efficiently.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+    <section id="contact" class="section">
+        <h2 class="section-title">Contact Me</h2>
+        <form class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
 </body>
 </html>
