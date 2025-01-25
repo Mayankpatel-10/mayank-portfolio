@@ -1,71 +1,67 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const themeToggleBtn = document.getElementById('theme-toggle');
-    const body = document.body;
-    const sections = document.querySelectorAll('.animate');
-    const navToggleBtn = document.getElementById('nav-toggle');
-    const nav = document.querySelector('nav ul');
-
-    themeToggleBtn.addEventListener('click', () => {
-        body.classList.toggle('dark-theme');
-        body.classList.toggle('light-theme');
+document.addEventListener("DOMContentLoaded", () => {
+    // Smooth Scroll for Navigation
+    document.querySelectorAll(".nav-link").forEach(link => {
+      link.addEventListener("click", e => {
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute("href"));
+        target.scrollIntoView({ behavior: "smooth" });
+      });
     });
-
-    const handleScroll = () => {
-        sections.forEach(section => {
-            const sectionTop = section.getBoundingClientRect().top;
-            const sectionHeight = section.getBoundingClientRect().height;
-            if (sectionTop < window.innerHeight - sectionHeight / 4) {
-                section.classList.add('visible');
-            } else {
-                section.classList.remove('visible');
-            }
-        });
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    handleScroll();
-
-    navToggleBtn.addEventListener('click', () => {
-        if (nav.classList.contains('open')) {
-            nav.classList.add('fade-out');
-            nav.classList.remove('open');
-            setTimeout(() => nav.classList.remove('fade-out'), 300); // match transition duration
-        } else {
-            nav.classList.add('open');
+  
+    // Initialize Particles.js for full-page
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 100, density: { enable: true, value_area: 800 } },
+        color: { value: "#ffffff" },
+        shape: {
+          type: "circle",
+          stroke: { width: 0, color: "#000000" },
+          polygon: { nb_sides: 5 }
+        },
+        opacity: {
+          value: 0.5,
+          random: false,
+          anim: { enable: false }
+        },
+        size: {
+          value: 3,
+          random: true,
+          anim: { enable: false }
+        },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#ffffff",
+          opacity: 0.4,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 6,
+          direction: "none",
+          random: false,
+          straight: false,
+          out_mode: "out",
+          bounce: false,
+          attract: { enable: false }
         }
-    });
-
-    // Add click event for skill photos
-    const skillPhotos = document.querySelectorAll('.skill-photo img');
-    skillPhotos.forEach(photo => {
-        photo.addEventListener('click', () => {
-            const parent = photo.closest('.roadmap-item');
-            parent.classList.toggle('open');
-        });
-    });
-
-    // Modal functionality for project images
-    const modal = document.getElementById('image-modal');
-    const modalImg = document.getElementById('modal-image');
-    const captionText = document.getElementById('caption');
-    const projectImages = document.querySelectorAll('.project-gallery img');
-    const closeBtn = document.getElementsByClassName('close')[0];
-
-    projectImages.forEach(img => {
-        img.addEventListener('click', () => {
-            modal.style.display = 'block';
-            modalImg.src = img.src;
-            captionText.innerHTML = img.alt;
-        });
-    });
-
-    closeBtn.onclick = () => {
-        modal.style.display = 'none';
-    };
-
-    window.onclick = (event) => {
-        if (event.target === modal) {
-            modal.style.display = 'none';
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: { enable: true, mode: "grab" },
+          onclick: { enable: true, mode: "push" },
+          resize: true
+        },
+        modes: {
+          grab: { distance: 200, line_linked: { opacity: 1 } },
+          bubble: { distance: 400, size: 40, duration: 2 },
+          push: { particles_nb: 4 }
         }
-    };
-});
+      }
+    });
+  });
+  
+  <div class="skill" data-tooltip="Expert in creating semantic and accessible HTML structures">
+  ...
+</div>
