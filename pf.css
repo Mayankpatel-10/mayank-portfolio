@@ -105,7 +105,7 @@ header {
 .hero-image {
     width: 25%; 
     height: 25%;
-    border-radius: 25%;
+    border-radius: 10%;
     margin-top: 20px;
     border: 3px solid rgba(107, 70, 193, 0.3);
     box-shadow: 0 25px 15px rgba(189, 139, 255, 0.5);
