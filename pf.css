@@ -239,13 +239,15 @@ header {
 
 @media (max-width: 768px) {
     #contact {
-        padding: 2rem 1rem;
+        padding: 3rem 1rem;
     }
     
-    #contact a {
+    contact a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: auto;
         margin: 0.5rem;
-        padding: 0.6rem 1rem;
-        display: block;
     }
 }
 /* Particles Background */
@@ -277,4 +279,36 @@ header {
     height: 3px;
     background: linear-gradient(90deg, var(--primary), var(--secondary));
     box-shadow: 0 0 15px var(--primary);
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    #contact {
+        padding: 2rem 1rem;
+    }
+
+    #contact a {
+        display: block;
+        width: 80%;
+        margin: 0.5rem auto;
+        padding: 0.7rem;
+        font-size: 0.9rem;
+    }
+
+    #contact .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    #contact a i {
+        margin-right: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #contact a {
+        width: 90%;
+        font-size: 0.8rem;
+        padding: 0.6rem;
+    }
 }
