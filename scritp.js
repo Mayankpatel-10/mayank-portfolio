@@ -65,4 +65,3 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
           behavior: 'smooth'
       });
   });
-});
